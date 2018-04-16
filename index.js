@@ -11,7 +11,7 @@ module.exports = function BlockLockons(dispatch) {
 	let partyMembers = [];
 	let pid;
 	
-	dispatch.hook('S_LOGIN', 4, event => {	
+	dispatch.hook('S_LOGIN', 7, event => {	
 		if(7 != ((event.model - 10101) % 100)) { //not mystic
 			slaying = false;	
 			ignore = [];
