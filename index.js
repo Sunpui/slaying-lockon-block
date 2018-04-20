@@ -30,12 +30,12 @@ module.exports = function BlockLockons(dispatch) {
 		}
 	});
 	
-	dispatch.hook('S_PARTY_MEMBER_LIST', 5, (event) => {
+	dispatch.hook('S_PARTY_MEMBER_LIST', 6, (event) => {
 		partyMembers = [];
 		for(let pMember of event.members) {
 			if(pMember.playerId !== pid) {
 				partyMembers.push({
-					cid: pMember.cid,
+					cid: pMember.gameId,
 					playerId: pMember.playerId,
 					name: pMember.name
 				});
